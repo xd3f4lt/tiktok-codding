@@ -6,7 +6,7 @@ Coding for him/her as a special gift.
 
 
 # How To Use The Files
-After downloading the .zip file, visit www.replit.com. Create a new Repl under "HTML/CSS/JS".
+After downloading the .zip file, visit www.replit.com. Create a new Repl under "HTML/CSS/JS". Upload all the files from the .zip folder into the Repl you just created. Then everything should work, if it doesn't work just send me a DM on my Tiktok :) Happy codding!
 
 # index.html
 To edit the name of the person, you can visit index.html
