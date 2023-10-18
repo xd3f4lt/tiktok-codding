@@ -6,7 +6,7 @@ Coding for him/her as a special gift.
 
 
 # How To Use The Files
-After downloading the zip files, visit www.replit.com. Create a new Repl under "HTML/CSS/JS".
+After downloading the .zip file, visit www.replit.com. Create a new Repl under "HTML/CSS/JS".
 
 # index.html
 To edit the name of the person, you can visit index.html
