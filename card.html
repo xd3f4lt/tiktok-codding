@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I Love You</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css?family=Indie+Flower');
+    @import url('https://fonts.googleapis.com/css?family=Amatic+SC');
+
+    body {
+        font-family: 'Indie Flower', cursive !important;
+        background: #FDE3A7;
+        margin: 0;
+        padding: 0;
+    }
+
+    ::selection {
+        background: transparent;
+    }
+
+    h4 {
+        font-size: 24px;
+        line-height: 1px;
+        font-family: 'Amatic SC', cursive !important;
+    }
+
+    .color1 {
+        color: #1BBC9B;
+    }
+
+    .color2 {
+        color: #C0392B;
+    }
+
+    .card {
+        color: #013243;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 300px;
+        height: 400px;
+        background: #e0e1dc;
+        transform-style: preserve-3d;
+        transform: translate(-50%, -50%) perspective(2000px);
+        box-shadow: inset 10px 0 10px rgba(0, 0, 0, 0.3), 5px 0 30px rgba(0, 0, 0, 0.3);
+        transition: 1s;
+    }
+
+    .card:hover {
+        transform: translate(-50%, -50%) perspective(2000px) rotate(15deg) scale(1.2);
+        box-shadow: inset 5px 0 10px rgba(0, 0, 0, 0.3), 0 10px 100px rgba(0, 0, 0, 0.3);
+    }
+
+    .card:before {
+        content: '';
+        position: absolute;
+        top: -5px;
+        left: 0;
+        width: 100%;
+        height: 5px;
+        background: #BAC1BA;
+        transform-origin: bottom;
+        transform: skewX(-45deg);
+    }
+
+    .card:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: -5px;
+        width: 5px;
+        height: 100%;
+        background: #92A29C;
+        transform-origin: left;
+        transform: skewY(-45deg);
+    }
+
+    .card .imgBox {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        transform-origin: left;
+        transition: 0.7s;
+    }
+
+    .card .bark {
+        position: absolute;
+        background: #e0e1dc;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        transition: 0.7s;
+    }
+
+    .card .imgBox img {
+        min-width: 250px;
+        max-height: 400px;
+    }
+
+    .card:hover .imgBox {
+        transform: rotateY(-135deg);
+    }
+
+    .card:hover .bark {
+        opacity: 1;
+        transition: 0.6s;
+        box-shadow: 10px 5px 10px rgba(0, 0, 0, 0.3) inset;
+    }
+
+    .card .details {
+        position: absolute;
+        top: 0;
+        left: 0;
+        box-sizing: border-box;
+        padding: 0 0 0 20px;
+        z-index: -1;
+        margin-top: 30px;
+    }
+
+    .card .details p {
+        font-size: 15px;
+        line-height: 5px;
+        padding: 0 0 0 20px;
+        margin-top: -0.5px;
+    }
+
+    .card .details h4 {
+        text-align: center;
+        margin-top: 1px;
+    }
+  .gift {
+        text-align: left;
+        margin-top: -20px;
+    }
+
+    .text-right {
+        text-align: right;
+    }
+  /* CSS for customizing text below the card */
+        .text-below-card {
+            font-size: 25px; /* Change the font size to your preference */
+            text-align: center; /* Center-align the text */
+            margin-top: 50px; /* Adjust the top margin to control the position */
+        }
+  .claim {
+        text-align: left;
+        margin-top: 1px;
+    }
+
+
+</style>
+
+<body>
+  <!-- Text below the card -->
+    <div class="text-below-card">
+        <p>Hi Sayang <3</p>
+        <p>Comel tak kita dua?</p>
+    </div>
+    <div class="card">
+        <div class="imgBox">
+            <div class="bark"></div>
+            <img src="Cover.png" alt="tenet slow">
+        </div>
+        <div class="details">
+            <h4 class="color1">How are you doing love?</h4>
+            <h4 class="color2 margin">Hope you are always happy</h4>
+            <p><br></p>
+            <p>To the woman I love,</p>
+            <p>Whenever you feel down</p>
+            <p>Always remember, you are not alone</p>
+            <p>I will be there for you,</p>
+            <p>I will do my best</p>
+            <p>to make you the happiest</p>
+            <p>woman in the entire world <3</p>
+            <p>And don't forget</p>
+            <p>Always wear your beautiful smile. :)</p>
+            <p>I love you "her/his name"</p>
+            <p><br></p>
+          <div class="gift">
+            <span>I have a special gift for you <3</span>
+        </div>
+          <div class="claim">
+          <button>
+            <a href="flower.html" target="_blank">Claim me</a>
+        </button>
+            <p class="text-right">Sincerely,</p>
+            <p class="text-right">"Your Name"♥</p>
+
+        </div>
+
+      <button id="playButton">Click Me</button>
+
+        <!-- Add the audio element without controls and set to autoplay -->
+        <audio id="audioPlayer" autoplay loop>
+            <source src="Bg.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+
+    </div>
+
+
+    <!-- JavaScript to play audio after user interaction -->
+    <script>
+        const playButton = document.getElementById('playButton');
+        const audioPlayer = document.getElementById('audioPlayer');
+
+        playButton.addEventListener('click', () => {
+            audioPlayer.play();
+            playButton.style.display = 'none'; // Hide the button after playing
+        });
+    </script>
+</body>
+</html>
+
